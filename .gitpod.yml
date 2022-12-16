@@ -4,7 +4,7 @@ image:
 tasks:
   - name: Start Development Environment
     init: |
-      doppler configure set token $DOPPLER_LOCAL_TOKEN
+      echo $DOPPLER_LOCAL_TOKEN | doppler configure set token --scope /
       npm install
     command: |
       npm run dev
