@@ -5,4 +5,4 @@ RUN sudo apt-get update && sudo apt-get install -y apt-transport-https ca-certif
     && echo "deb https://packages.doppler.com/public/cli/deb/debian any-version main" | sudo tee /etc/apt/sources.list.d/doppler-cli.list \
     && sudo apt-get update \
     && sudo apt-get install doppler \
-    doppler configure set token $DOPPLER_LOCAL_TOKEN
+    && doppler configure set token $DOPPLER_LOCAL_TOKEN
